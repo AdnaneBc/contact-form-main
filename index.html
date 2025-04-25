@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="script.js" defer></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Contact Us</h1>
+        <form action="" id="form">
+          <div class="double-input">
+            <div class="input-field">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" />
+            </div>
+            <div class="input-field">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" />
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="double-input">
+            <div class="input-field">
+              <label>Query Type*</label>
+              <div class="double-input" id="radiobox-container">
+                <div class="radiobox">
+                  <input
+                    type="radio"
+                    id="general"
+                    name="guery-type"
+                    value="general"
+                  />
+                  <label for="general">General Enquiry</label>
+                </div>
+                <div class="radiobox">
+                  <input
+                    type="radio"
+                    id="support"
+                    name="guery-type"
+                    value="support"
+                  />
+                  <label for="support">Support Request</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="message">Message *</label>
+            <textarea name="" id=""></textarea>
+          </div>
+          <div class="submit">
+            <input
+              type="checkbox"
+              id="submitChecked"
+              name="submitChecked"
+              value="submitChecked"
+            />
+            <label for="submitChecked">
+              I consent to being contacted by the team *
+            </label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
